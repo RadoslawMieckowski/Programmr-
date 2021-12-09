@@ -1,0 +1,23 @@
+class flow {
+
+  public static void main(String[] args) {
+
+    int num = 11;
+
+   //Write your line here between the start and end comments
+        // start
+String message="The number is prime.";
+for(int i=2;i<num;i++){
+    if(num%i==0){
+        message="The number is not prime.";
+        break;
+    }    
+}
+
+System.out.println(message);
+
+
+        //end
+
+}
+}

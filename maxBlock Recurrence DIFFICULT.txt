@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class Challenge{
+ static int counter=1;
+ public static void main(String args[]){
+ Scanner scanner=new Scanner(System.in);
+ System.out.println("Enter a string:");
+ String str = scanner.nextLine();
+ System.out.println(maxBlock(str,0));
+}
+    ///{write you code here
+static int maxBlock(String x,int j){
+    if(x.length()==0){
+        Challenge.counter=0;
+    }else{
+        int counter=1;
+    for(int i=j;i<x.length()-1;i++){
+        if(x.charAt(i)==x.charAt(i+1)){
+            counter++;
+        }else {
+            if(counter>Challenge.counter){Challenge.counter=counter;}
+            j++;
+            maxBlock(x,j);   
+            break;
+            }
+        }   
+    }
+    return Challenge.counter;
+}
+
+
+
+
+
+
+
+    ///}
+
+  
+}
+
+

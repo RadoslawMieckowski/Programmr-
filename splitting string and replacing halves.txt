@@ -1,0 +1,40 @@
+import java.util.Scanner; 
+class Challenge{ 
+ 
+ public static void main(String args[]){ 
+ Scanner scanner=new Scanner(System.in); 
+ String x=scanner.next();
+ 
+ ///{ write your code here    
+ StringBuilder strbdr=new StringBuilder("");
+ int length=x.length();
+ if(length==1){
+     System.out.println(x);
+ } else{
+     if(length%2==1){
+     int start=length/2;
+     strbdr.append(x.substring(start));
+     strbdr.append(x.substring(0,start));
+    }else{
+        int start=length/2;
+     strbdr.append(x.substring(start));
+     strbdr.append(x.substring(0,start));
+    }  
+    System.out.println(strbdr.toString());
+ }
+
+ 
+ 
+
+ 
+ 
+ 
+    
+
+
+
+
+///}   
+} 
+ 
+} 

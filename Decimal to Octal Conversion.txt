@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class dectooct
+
+{
+  public static void main(String[] args)
+  {
+    int num,oct;
+    int rem=-1;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a number:");
+    num = sc.nextInt();
+	
+    StringBuilder strbdr=new StringBuilder("");
+    while(num!=0){
+        rem=num%8;
+        num=num/8;
+        strbdr.append(String.valueOf(rem));
+    }
+        strbdr=strbdr.reverse();
+       oct=Integer.parseInt(strbdr.toString());
+
+	 System.out.println("Octal number is:");
+	 System.out.println(oct);
+
+  } 
+  
+}
+

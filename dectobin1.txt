@@ -1,0 +1,28 @@
+import java.lang.*;
+import java.io.*;
+
+public class dectobin1{  
+  	public static void main(String args[]) throws IOException{  
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+  		System.out.println("Enter the decimal value:");  
+  		String string = bf.readLine();
+  		StringBuilder strbdr=new StringBuilder("");
+  		int hex=Integer.parseInt(string);
+  		int rest=0;
+  		while(hex!=0){
+  		    rest=hex%2;
+  		    hex=hex/2;
+  		    strbdr.append(String.valueOf(rest));
+  		}
+  		hex=Integer.parseInt(strbdr.reverse().toString());
+   		
+ 			 System.out.println("Binary equivalent number is:");
+ 			 System.out.println(String.valueOf(hex));
+  		}
+
+
+}   
+ 
+
+
+

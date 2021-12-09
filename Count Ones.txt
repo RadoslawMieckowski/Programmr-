@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Scanner;
+public class countone
+{
+public static void main(String[] args)
+{
+ 
+  System.out.println("Enter the Maximum value:");
+  Scanner sc1 = new Scanner(System.in);
+
+  long min=sc1.nextLong();
+  long max = sc1.nextLong();
+  
+
+  int count=0;
+
+Pattern pattern=Pattern.compile("1");
+
+ for(int i=(int)min; i<=(int)max;i++)
+ {
+    Matcher matcher=pattern.matcher(String.valueOf(i));
+    while(matcher.find()){
+        count++;
+    }
+  }
+System.out.println("Total sum of count of 1s:"); 
+System.out.println(count);
+}
+}
+
+
+
+
+
+
+
+
+
+

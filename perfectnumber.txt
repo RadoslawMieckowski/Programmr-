@@ -1,0 +1,35 @@
+/*
+Perfect number is a positive number which sum of all positive divisors 
+excluding that number is equal to that number. For example 6 is perfect number 
+since divisor of 6 are 1, 2 and 3.  Sum of its divisor is1 + 2+ 3 =6
+Note: 6 is the smallest perfect number.
+Next perfect number is 28 since 1+ 2 +
+
+*/ 
+import java.io.*;
+class perfectnumber{
+
+public static void main(String arg[])throws Exception{
+
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter the number:");
+int number =Integer.parseInt(br.readLine());
+
+/*Write down your logic here*/
+int sum=0;
+ System.out.println("The result is:");
+ for(int i=1;i<number;i++){
+     if(number%i==0){
+         sum+=i;
+     }
+ }
+ 
+  if(sum==number)System.out.println("given number is a perfect number");
+else System.out.println("given number is not a perfect number");
+
+}
+ 
+
+}
+
+

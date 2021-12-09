@@ -1,0 +1,32 @@
+import java.lang.*;
+import java.io.*;
+import java.util.Scanner;
+
+public class consecutive{  
+  	public static void main(String args[]) throws IOException{  
+     Scanner sc=new Scanner(System.in);
+     int no;
+	 
+     System.out.println("Enter the number:");
+	 no=sc.nextInt();
+	  System.out.println("The result is:"); 
+     String noString=String.valueOf(no);
+     String message="given number is consecutive";
+     int start=Integer.parseInt(String.valueOf(noString.charAt(0)));
+        for(int i=0;i<noString.length();i++){
+            if(!String.valueOf(noString.charAt(i)).equals(String.valueOf(start++))){
+                message="given number is not a consecutive";
+                break;
+            }
+        }
+        System.out.println(message);
+    }
+}    
+
+
+
+
+
+
+
+

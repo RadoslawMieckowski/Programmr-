@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class Challenge{
+
+ public static void main(String args[]){
+    Scanner scanner=new Scanner(System.in);
+    String str=null,strng="";
+	System.out.println("Enter a string for stringSplosion:");
+	str=scanner.nextLine();
+	strng=stringSplosion(str);
+	System.out.println("here it is :"+strng);
+	}
+ public static String stringSplosion(String str) {
+    ///{Write your code here
+    String result="";
+    int licznik;
+    for(int i=0;i<str.length();i++){
+        licznik=0;
+        while(licznik<=i){
+            result=result+(String.valueOf(str.charAt(licznik)));//result.concat(String str);
+            licznik++;
+        }
+    }
+    //result=str;
+    
+    ///}
+    	  return result;
+}
+
+}

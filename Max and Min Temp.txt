@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+public class MaxMinTemprature
+{
+	public static void main(String a[]) throws Exception
+	{ 
+         double MaxTemp=0.0,MinTemp=0.0;
+         double []arr=new double[7];
+         Scanner in=new Scanner(System.in);
+         for(int i=0;i<arr.length;i++){
+             arr[i]=in.nextDouble();
+         }
+
+         System.out.println("Maximum:");
+         MaxTemp=findMaxTemp(arr);
+         System.out.println(MaxTemp);
+         System.out.println("Minimum:");
+         MinTemp=findMinTemp(arr);
+         System.out.println(MinTemp);
+        }
+        static double findMaxTemp(double... arr){
+            Arrays.sort(arr);
+            return arr[arr.length-1];
+        }
+         static double findMinTemp(double... arr){
+            Arrays.sort(arr);
+            return arr[0];
+        }
+}
+
+

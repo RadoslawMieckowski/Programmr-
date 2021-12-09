@@ -1,0 +1,53 @@
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+class Challenge{
+    public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the URL :");
+		String s=sc.nextLine();
+		
+		Challenge obj=new Challenge();
+		s=obj.decodeURL(s);
+		System.out.print("Decoded URL is :"+s);
+	}
+	//{write your code here
+    
+    public String decodeURL(String x){
+        Pattern pattern= Pattern.compile("%20");
+        Matcher matcher= pattern.matcher(x);
+        boolean success=matcher.matches();
+        if(success){
+            x=matcher.replaceAll(" ");
+        }else{
+            pattern= Pattern.compile("%3A");
+            matcher=pattern.matcher(x);
+            success=matcher.matches();
+            if(success){
+                x=matcher.replaceAll("?");
+            }else{
+                pattern= Pattern.compile("%3D");
+                matcher=pattern.matcher(x);
+                success=matcher.matches();
+                if(success){
+                     x=matcher.replaceAll(".");
+                }
+        }
+       
+       
+    }
+    return x;
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //}
+}

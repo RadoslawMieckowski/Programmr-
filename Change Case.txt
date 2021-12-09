@@ -1,0 +1,34 @@
+import java.io.*;  
+class Challenge{  
+  
+ public static void main(String args[])throws IOException 
+ {  
+  InputStreamReader is=new InputStreamReader(System.in);    
+  BufferedReader br=new BufferedReader(is);   
+ String newstr="";  
+ char ch=' ';  
+  
+ System.out.println("Enter the Word:");  
+ String str=br.readLine();  
+  
+    ///{write your code here   
+   StringBuilder strbdr=new StringBuilder("");
+     for(int i=0;i<str.length();i++){
+      if(str.charAt(i)>='A'&&str.charAt(i)<='Z'){
+          strbdr.append(String.valueOf(str.charAt(i)).toLowerCase());
+      }
+      else strbdr.append(String.valueOf(str.charAt(i)).toUpperCase());
+  }
+  newstr=strbdr.toString();
+    
+     
+  
+  
+  
+  
+    ///}   
+  
+  System.out.println("Edited Word:"+newstr);   
+}  
+  
+}  

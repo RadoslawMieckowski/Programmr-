@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+class Challenge{
+
+ public static void main(String args[]){
+ Scanner scanner=new Scanner(System.in);
+ System.out.println("Enter a string:");
+ String string = scanner.nextLine();
+    ///{write your code here
+ 
+Pattern pattern=Pattern.compile(".*b{1}.{1}b{1}.*");
+Matcher matcher=pattern.matcher(string);
+
+if(matcher.matches()){
+    System.out.println("True");
+}else System.out.println("False");
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,34 @@
+/*program to print the triangle of '*' using loops  */
+import java.util.Scanner;
+class PrintTraingle{
+
+public static void main(String arg[]){
+
+Scanner scanner = new Scanner(System.in);
+
+System.out.println("Enter the size:");
+int size=scanner.nextInt();
+System.out.println("Traingle is:");
+print_(size);
+int counter=size;
+for(int i=0;i<size;i++){
+   counter--;
+   for(int j=1;j<=size-counter;j++){
+        System.out.print('*');
+   }
+   System.out.println();
+}
+
+
+ 
+ }//main ends 
+
+public static void print_(int n){
+
+  
+}
+
+
+}//class ends
+
+

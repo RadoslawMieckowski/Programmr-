@@ -1,0 +1,55 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+public class euclidgcd
+{
+
+    public static void main(String[] args) 
+   {
+        int p,q;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter two numbers :"); 
+        p = sc.nextInt();
+        q = sc.nextInt();
+        ArrayList <Integer>arr=new ArrayList<>(); 
+        ArrayList <Integer>arr2=new ArrayList<>();
+        ArrayList <Integer>arr3=new ArrayList<>();
+        int divp;
+        int divq;
+        for(int i=1;i<=p;i++){
+            if(p%i==0){
+                arr.add(i);
+            }
+        }
+          for(int i=1;i<=q;i++){
+            if(q%i==0){
+                arr2.add(i);
+            }
+          }
+            for(int i=0;i<arr.size();i++){
+                if(arr.contains(arr2.get(i))){
+                     arr3.add(arr2.get(i));
+            }
+             if(arr2.contains(arr.get(i))){
+                     arr3.add(arr.get(i));
+                }
+            }
+            int max=arr3.get(0);
+            for(int i=0;i<arr3.size();i++){
+                if(max<arr3.get(i)){
+                    max=arr3.get(i);
+                }
+            }
+             System.out.println("GCD is :");
+             System.out.println(max);
+        }
+
+       
+        
+       
+}
+
+
+
+
+//to rozwiązanie działa, ale coś tu mi nie pasuje....

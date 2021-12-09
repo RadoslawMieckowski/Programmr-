@@ -1,0 +1,42 @@
+/*Lucky number calculater(just calculates the sum of digits of the given date*/
+import java.io.*;
+class digitsum{ 
+
+public static void main(String arg[])throws Exception{
+
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter the date(ddmmyy):");
+int number =Integer.parseInt(br.readLine());
+String numberString=String.valueOf(number);
+int first=Integer.parseInt(String.valueOf(numberString.charAt(0)));
+int second=Integer.parseInt(String.valueOf(numberString.charAt(1)));
+int third=Integer.parseInt(String.valueOf(numberString.charAt(2)));
+int fourth=Integer.parseInt(String.valueOf(numberString.charAt(3)));
+int fifth=Integer.parseInt(String.valueOf(numberString.charAt(4)));
+int sixth=Integer.parseInt(String.valueOf(numberString.charAt(5)));
+int x=Integer.parseInt(String.valueOf(numberString.charAt(6)));
+int y=Integer.parseInt(String.valueOf(numberString.charAt(7)));
+int sum1=first+second+third+fourth+fifth+sixth+x+y;
+String numberString2=String.valueOf(sum1);
+System.out.println("Your lucky number is:");
+if(numberString2.length()==2){
+    int seventh=Integer.parseInt(String.valueOf(numberString2.charAt(0)));
+    int eight=Integer.parseInt(String.valueOf(numberString2.charAt(1)));
+    int sum2=seventh+eight;
+    System.out.println(sum2);
+}
+else {
+    System.out.println(sum1);
+}
+//12052014
+   
+}//main
+
+}  
+
+
+
+
+
+
+

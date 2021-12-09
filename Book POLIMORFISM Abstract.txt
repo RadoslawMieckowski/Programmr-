@@ -1,0 +1,63 @@
+import java.util.Scanner;
+public class Challenge{
+
+ public static void main(String args[]){
+ Scanner scanner=new Scanner(System.in);
+ Book[] book = new Book[2];
+ System.out.println("Title of fiction book:");
+ String t = scanner.nextLine();
+ book[0] = new Fiction(t);
+ System.out.println("Title of non fiction book:");
+ String t1 = scanner.nextLine();
+ book[1] = new NonFiction(t1);
+ for(int i=0;i<book.length;i++)
+ {
+     System.out.println("Title-"+book[i].getTitle()+" Cost-$"+book[i].getPrice());
+ }
+}
+}
+ ///{write you code here
+abstract class Book{
+    protected String title;
+    protected double price;
+    public Book(String title){
+        this.title=title;
+    }
+    public String getTitle(){
+        return title;
+    }
+    public double getPrice(){
+        return price;
+    }
+    public abstract void setPrice(double price);
+} 
+class Fiction extends Book{
+    public Fiction(String title){
+        super(title);
+        setPrice(24.99);
+    }
+    public void setPrice(double price){
+        this.price=price;
+    }
+}
+class NonFiction extends Book{
+    public NonFiction(String title){
+         super(title);
+        setPrice(37.99);
+    }
+    public void setPrice(double price){
+        this.price=price;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+    ///}

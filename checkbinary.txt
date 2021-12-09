@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class checkbinary
+{
+  public static void main(String[] args)
+  {
+        int num;
+        System.out.println("Enter a number:");
+	Scanner sc = new Scanner(System.in);
+	num = sc.nextInt();
+	int flag=0;
+	String numString=String.valueOf(num);
+	for(int i=0;i<numString.length();i++){
+	    if(numString.charAt(i)!='0'&&numString.charAt(i)!='1'){
+	       	System.out.println("Not Binary");
+	       	flag++;
+	        break;
+	       
+	    }
+	    
+	}
+	if(flag==0)System.out.println("Binary");
+	
+        /*
+             Your logic goes here
+        */
+
+//	System.out.println("The number is:");
+	
+  }
+}
+

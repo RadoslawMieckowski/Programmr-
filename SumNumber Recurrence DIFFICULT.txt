@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class Challenge{
+static int sum=0;
+ public static void main(String args[]){
+ Scanner scanner=new Scanner(System.in);
+ System.out.println("Enter a string:");
+ String string = scanner.nextLine();
+ System.out.println("Sum:"+sumNumbers(string,0));
+}
+    ///write your code here
+
+static int sumNumbers(String str,int start){
+    String numStr="";
+    for(int i=start;i<str.length();i++){
+        if(str.charAt(i)>='0'&&str.charAt(i)<='9'){
+           numStr=numStr.concat(String.valueOf(str.charAt(i)));
+          // System.out.println("numStr="+numStr);
+           if(i==str.length()-1&&numStr.length()!=0){
+               sum+=Integer.parseInt(numStr);
+           }
+        }else{
+            if(numStr.length()!=0)sum+=Integer.parseInt(numStr);
+           // System.out.println(sum);
+            sumNumbers(str,i+1);
+            break;
+        }
+    }
+    return sum;
+}
+}

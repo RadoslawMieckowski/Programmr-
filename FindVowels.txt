@@ -1,0 +1,66 @@
+import java.io.*;
+
+public class FindVowels
+{
+	public static void main(String a[]) throws Exception
+	{
+              String line; 
+              int number_of_vowels,uc,lc,uv,lv;
+              uc=lc=uv=lv=0;
+              System.out.println("Enter your sentence :");
+              BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+              
+              line=br.readLine();
+              //write your logic here
+             
+              for(int i=0;i<line.length();i++){
+                  if(
+                      line.charAt(i)=='a'||
+                      line.charAt(i)=='e'||
+                      line.charAt(i)=='i'||
+                      line.charAt(i)=='o'||
+                      line.charAt(i)=='u'||
+                      line.charAt(i)=='y'
+                      )lv++;
+                else if(
+                      line.charAt(i)=='A'||
+                      line.charAt(i)=='E'||
+                      line.charAt(i)=='I'||
+                      line.charAt(i)=='O'||
+                      line.charAt(i)=='U'||
+                      line.charAt(i)=='Y'
+                      )uv++;
+                else if(
+                      line.charAt(i)>='B'&&line.charAt(i)<='D'||
+                      line.charAt(i)>='F'&&line.charAt(i)<='H'||
+                      line.charAt(i)>='J'&&line.charAt(i)<='N'||
+                      line.charAt(i)>='P'&&line.charAt(i)<='T'||
+                      line.charAt(i)>='V'&&line.charAt(i)<='X'||
+                      line.charAt(i)=='Z'
+                      )uc++;
+                else if(
+                      line.charAt(i)>='b'&&line.charAt(i)<='d'||
+                      line.charAt(i)>='f'&&line.charAt(i)<='h'||
+                      line.charAt(i)>='j'&&line.charAt(i)<='n'||
+                      line.charAt(i)>='p'&&line.charAt(i)<='t'||
+                      line.charAt(i)>='v'&&line.charAt(i)<='x'||
+                      line.charAt(i)=='z'
+                      )lc++;
+              }
+                
+             
+
+
+              //end 
+             //Printing the output.
+              System.out.println("Uppercase Consonants = "+ uc + ".") ;
+              System.out.println("Lowercase Consonants = "+lc + ".");
+              System.out.println("Uppercase Vowels = "+ uv + ".");
+              System.out.println("Lowercase Vowels = "+ lv + ".");
+              number_of_vowels=uv+lv;
+              System.out.println("Number of vowels = "+ number_of_vowels);
+
+					
+	}
+	
+}

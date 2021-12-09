@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+class Challenge{
+    public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the roman numeral :");
+		String rom=sc.nextLine();
+		
+       /* 	StringBuilder strbdr=new StringBuilder("");
+		for(int i=0;i<rom.length();i++){
+		    strbdr.append(String.valueOf(readCipher(rom.charAt(i))));
+		}
+		System.out.println(strbdr.toString());
+	*/
+		int sum=readCipher(rom.charAt(rom.length()-1));
+		for(int i=rom.length()-1;i>=1;i--){
+		    if(readCipher(rom.charAt(i))>readCipher(rom.charAt(i-1))){
+		        sum-=readCipher(rom.charAt(i-1));
+		    }else{
+		        sum+=readCipher(rom.charAt(i-1));
+		    }
+		    /*System.out.println("i="+i);
+		    System.out.println(sum);*/		    
+		}
+        System.out.println(sum);
+
+	
+    }
+    static int readCipher(char cipher){
+            		int arabicDigit=0;
+            		cipher=String.valueOf(cipher).toLowerCase().charAt(0);
+            		switch(cipher){
+		    case 'i':{
+		        arabicDigit=1;
+		        break;
+		    }
+		    case 'v':{
+		        arabicDigit=5;
+		        break;
+		    }
+		    case 'x':{
+		        arabicDigit=10;
+		        break;
+		    }
+		    case 'l':{
+		        arabicDigit=50;
+		        break;
+		    }
+		    case 'c':{
+		        arabicDigit=100;
+		        break;
+		    }
+		    case 'd':{
+		        arabicDigit=500;
+		        break;
+		    }
+		    case 'm':{
+		        arabicDigit=1000;
+		        break;
+		    }
+		}
+		return arabicDigit;
+	}
+    	
+
+}
+		//}
+

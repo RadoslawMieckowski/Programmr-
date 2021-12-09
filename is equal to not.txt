@@ -1,0 +1,49 @@
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+class Challenge{
+
+ public static void main(String args[]){
+ Scanner scanner=new Scanner(System.in);
+ System.out.println("Enter a string:");
+ String string = scanner.nextLine();
+ System.out.println(equalIsNot(string));
+}
+    
+public static boolean equalIsNot(String str){
+  int counterIs=0;
+int counterNot=0;
+
+Pattern patternIs=Pattern.compile("is");
+Matcher matcherIs=patternIs.matcher(str);
+while (matcherIs.find()){
+     counterIs++;
+     //System.out.println(counterIs);
+}
+//counterIs=matcherIs.results().count();
+
+Pattern patternNot=Pattern.compile("not");
+Matcher matcherNot=patternNot.matcher(str);
+while (matcherNot.find()){
+     counterNot++;
+    // System.out.println(counterNot);
+}
+//counterNot=matcherNot.results().count();
+
+if(counterIs==counterNot){
+    return true;
+}else return false;  
+}
+
+}
+    
+
+
+
+
+
+
+    
+
+
+

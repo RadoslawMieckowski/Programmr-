@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+
+public class naturalsum
+{
+  public static void main(String[] args)
+  {
+    int max=0;
+    int sum = 0;
+
+    System.out.println("Enter the maximum no:");
+    Scanner sc = new Scanner(System.in);
+    max = sc.nextInt();
+    int i=3;
+   while(i<max){
+        sum=sum+i;
+       i+=3;
+       //System.out.println(sum);
+   }
+     int j=5;
+   while(j<max){
+          if(j%3!=0){
+               sum=sum+j;
+       j+=5;
+       // System.out.println(sum);
+          }
+       
+   }
+    /*for(int i=3;i<max,i+3){
+        sum=sum+i;
+    }
+   for(int i=5,i<max,i+5){
+        if(i%3!=0){
+         sum=sum+i;        
+        }
+    }*/
+
+    System.out.println("Total is:");
+    System.out.println(sum);
+  }
+}
+
+
