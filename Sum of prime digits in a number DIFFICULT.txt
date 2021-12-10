@@ -1,0 +1,51 @@
+import java.util.Scanner;  
+class Challenge{  
+  
+ public static void main(String args[]){  
+  
+         Scanner sc = new Scanner(System.in) ; 
+  
+         System.out.print("Enter String: "); 
+         String str = sc.nextLine();  
+         //Start
+         ///{ Write your code here    
+    int sum=0; 
+    for(int i=0;i<str.length();i++){
+        boolean isToAdd=true;
+        int pointer=Integer.parseInt(String.valueOf(str.charAt(i)));
+        if(pointer!=1){
+            for(int j=2;j<pointer;j++){
+                if(pointer%j==0){
+                isToAdd=false;
+                break;
+                }
+            }
+            if(isToAdd){
+                sum+=pointer;
+                //System.out.println(sum);
+            }
+        }
+      
+    }
+    
+         
+         
+         
+         
+         
+        
+        
+        
+        
+        
+        ///} 
+           
+        
+         
+
+           
+        System.out.println ("Number of a's: " + sum);   
+        // End    
+}  
+  
+}  
