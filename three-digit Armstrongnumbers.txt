@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import static java.lang.Math.pow;
+class Challenge{
+
+ public static void main(String args[]){
+
+    
+
+    for (int i = 1; i <= 9; i++) {
+    		for (int j = 0; j <= 9; j++) {
+				for (int k = 0; k <= 9; k++) {
+                    ///{write you code here
+                    int number=Integer.parseInt(String.valueOf(i).concat(String.valueOf(j)).concat(String.valueOf(k)));
+				if(pow(i,3)+pow(j,3)+pow(k,3)==number){
+				    System.out.println(number);
+				}
+                
+                
+                
+                
+                
+                
+                
+				    ///}
+                }
+			}
+		}
+        
+  
+
+}
+
+}

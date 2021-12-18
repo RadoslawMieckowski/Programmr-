@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class Challenge{
+
+ public static void main(String args[]){
+        Scanner scanner = new Scanner(System.in);
+    	System.out.print("Starting number:");
+		int number = scanner.nextInt();
+        if (number < 1) {
+    		System.out.println("Please insert a natural number:");
+		}
+		int counter = 0;
+		System.out.print(number + " ");
+        
+    ///{write you code here
+do{
+    if(number%2==0){
+        number=number/2;
+    }else{
+        number=number*3+1;
+    }
+    System.out.print(number+" ");
+    counter++;
+} while(number!=1);
+       
+       
+       
+       
+       
+
+    ///}
+
+  System.out.println("\nTerminated after " + counter + " steps.");
+}
+
+}
